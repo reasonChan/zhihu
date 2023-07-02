@@ -5,7 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'lib-flexible'
 import './index.less'
-//antd引入
+
+/*  REDUX    */
+import { Provider } from "react";
+import store from './store'
+
+/*  ANTD-MOBILE    */
 import { ConfigProvider } from "antd-mobile";
 import zhCN from "antd-mobile/es/locales/zh-CN";
 /*  处理最大宽度    */
@@ -24,7 +29,9 @@ import zhCN from "antd-mobile/es/locales/zh-CN";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <ConfigProvider locale={zhCN}>
-        <App></App>
+        <Provider store={store}>
+            <App/>
+        </Provider>
     </ConfigProvider>
 );
 
