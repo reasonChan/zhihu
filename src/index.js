@@ -7,7 +7,7 @@ import 'lib-flexible'
 import './index.less'
 
 /*  REDUX    */
-import { Provider } from "react";
+import { Provider } from "react-redux";
 import store from './store'
 
 /*  ANTD-MOBILE    */
