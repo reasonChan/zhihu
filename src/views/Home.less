@@ -11,10 +11,23 @@
   a {
     display: block;
     height: 100%;
+
+    &:visited {
+      .content {
+        .title {
+          color: #999;
+        }
+
+        .author {
+          color: #aaa;
+        }
+      }
+    }
   }
 
-  img {
+  .adm-image,img {
     display: block;
+    width: 100%;
     height: 100%;
   }
 
@@ -58,4 +71,29 @@
     }
   }
 
+}
+
+.load-box {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background: #eee;
+  font-size: 24px;
+  color: #999;
+
+  .adm-dot-loading {
+    font-size: 32px;
+  }
+}
+
+.news-box {
+  padding: 10px 30px;
+
+  .adm-divider-left {
+    &.adm-divider-horizontal {
+      &:before {
+        max-width: 2%;
+      }
+    }
+  }
 }

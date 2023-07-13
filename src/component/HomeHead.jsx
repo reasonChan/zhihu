@@ -4,10 +4,10 @@ import './HomeHead.less'
 const HomeHead = function HomeHead(props) {
     let { timeStamp } = props;
     let time = useMemo(() => {
-        const date = new Date(timeStamp)
+        const date = new Date(Date.now())
         const monthDict = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月']
         let month = monthDict[date.getMonth()]
-        let day = date.getDay().toString().padStart(2, '0')
+        let day = date.getDate().toString().padStart(2, '0')
         return { month, day }
     }, [timeStamp])
     return (
